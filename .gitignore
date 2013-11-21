@@ -1,5 +1,8 @@
 *.class
-
+target/*
+.project
+.classpath
+bin/*
 # Package Files #
 *.jar
 *.war

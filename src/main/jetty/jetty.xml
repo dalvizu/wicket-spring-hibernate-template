@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://jetty.mortbay.org/configure.dtd">
+<Configure id="web-portal" class="org.mortbay.jetty.Server">
+    <New id="DSTest" class="org.mortbay.jetty.plus.naming.Resource">
+        <Arg></Arg>
+        <Arg>jdbc/webdb</Arg>
+        <Arg>
+            <New class="org.h2.jdbcx.JdbcDataSource">
+                <Set name="URL">jdbc:h2:target/db/webdb;AUTO_SERVER=TRUE</Set> 
+                <Set name="user">sa</Set>
+            </New>
+        </Arg>
+    </New>
+</Configure>
